@@ -9,6 +9,16 @@
 			.shower {
 				--slide-ratio: calc(16 / 9);
 			}
+			.slide h1 {
+				margin: 0;
+			}
+			.slide h2 {
+				margin-top: 0;
+				margin-bottom: 20px;
+			}
+			.slide p {
+				margin: 0;
+			}
 		</style>
 	</head>
 	<body class="shower list">
@@ -18,15 +28,7 @@
 		</header>
 
 		<section class="slide" id="cover">
-			<h2>State Of A11y</h2>
-
-			<style>
-				#cover h2 {
-					margin: 30px 0 0;
-					text-align: center;
-					font-size: 70px;
-				}
-			</style>
+			<h1 class="shout">State Of A11y</h1>
 		</section>
 
 		<section class="slide">
@@ -38,6 +40,20 @@
 				<li>Амбассадор WTM</li>
 				<li>Помогаю в WDA</li>
 				<li>Мама, я скейтер</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>План</h2>
+			<ul>
+				<li>Что такое "доступность"?</li>
+				<li>Зачем?</li>
+				<li>Обучение</li>
+				<li>Дизайн</li>
+				<li>Разработка</li>
+				<li>Тестирование</li>
+				<li>Уже в проде</li>
+				<li>Тренды, перспективы</li>
 			</ul>
 		</section>
 
@@ -67,7 +83,11 @@
 		</section>
 
 		<section class="slide">
-			<h2>Зачем внедрять доступность (процент слабовидящих- Зачем внедрять доступность (процент слабовидящих, виды нарушений, временные ограничения)</h2>
+			<h1 class="shout">Зачем?</h1>
+		</section>
+
+		<section class="slide">
+			<h2>Зачем внедрять доступность (процент слабовидящих, виды нарушений, временные ограничения)</h2>
 			<p>15% (> 1 млрд) - ограничения</p>
 			<p>2-4% - значительные трудности</p>
 		</section>
@@ -120,6 +140,10 @@
 		</section>
 
 		<section class="slide">
+			<h1 class="shout">Обучение</h1>
+		</section>
+
+		<section class="slide">
 			<h2></h2>
 			<ul>
 				Результат — Где ты учился/-лась внедрять доступность? Если курсы, то какие?
@@ -142,13 +166,21 @@
 		</section>
 
 		<section class="slide">
-			<h2>Доступные цветовые схемы (дизайн для дальтоников)</h2>
-            <p>[http://colorsafe.co] — доступные цветовые палитры, которые сделаны по рекомендациям WCAG</p>
+			<h1 class="shout">Дизайн</h1>
+		</section>
+
+		<section class="slide">
+			<h2>Доступные цветовые схемы</h2>
+            <p>http://colorsafe.co — доступные цветовые палитры, которые сделаны по рекомендациям WCAG</p>
 			<p>https://jxnblk.github.io/colorable/</p>
-            <p>[https://color.adobe.com/] и [https://colorscheme.ru/] — подборка цветовой палитры с настройкой доступности</p>
+            <p>https://color.adobe.com/ и https://colorscheme.ru/ — подборка цветовой палитры с настройкой доступности</p>
 			<p>Полное тестирование контрастности:</p>
 			<p>https://webaim.org/resources/contrastchecker/ - Color Contrast Checker</p>
 			<p>https://www.paciellogroup.com/resources/contrastanalyser/ - Color Contrast Analyzer</p>
+		</section>
+
+		<section class="slide">
+			<h1 class="shout">Разработка</h1>
 		</section>
 
 		<section class="slide">
@@ -188,15 +220,24 @@
 		<section class="slide">
 			<h2>Доступность во Вью</h2>
 			<p>Сообщество Vue A11y</p>
-			<p>Тут части из моего доклада</p>
+			<p>Тут части из моего доклада https://lenaryan.github.io/vue-plus-ally/</p>
 		</section>
 
 		<section class="slide">
 			<h2>Доступность в Андроид</h2>
+			<p>Виктор Вихров — Адаптация приложения для незрячих - https://www.youtube.com/watch?v=krMqOJxQRfs</p>
+			<p>https://www.24a11y.com/2018/android-accessibility-at-airbnb/</p>
+			<p>Книга Android Accessibility by Tutorials https://www.raywenderlich.com/books/android-accessibility-by-tutorials/v1.0.ea1</p>
 		</section>
 
 		<section class="slide">
 			<h2>Доступность в iOS</h2>
+			<p>Книга Михаила Рубанова «Про доступность iOS» - https://rubanov.dev/a11y-book/</p>
+			<p>обложка_книги.жпг</p>
+		</section>
+
+		<section class="slide">
+			<h1 class="shout">Тестирование</h1>
 		</section>
 
 		<section class="slide">
@@ -212,9 +253,13 @@
 
 		<section class="slide">
 			<h2>Тестирование</h2>
-            <p>axe, wave, lighthouse, nu html validator, eslint?, devtools accessibility tab, acessibility tree, visual deficiencies emulation</p>
+            <p>axe, wave, lighthouse, nu html validator, devtools accessibility tab, acessibility tree, visual deficiencies emulation</p>
 			<p>axe accessibility linter</p>
 			<p>Скринридеры</p>
+		</section>
+
+		<section class="slide">
+			<h1 class="shout">Уже в проде</h1>
 		</section>
 
 		<section class="slide">
@@ -245,6 +290,15 @@
         <section class="slide">
 			<h2>Перспективы по развитию доступности</h2>
 			<p>Тут пока хз</p>
+		</section>
+
+		<section class="slide">
+			<h2>Контакты</h2>
+		</section>
+
+		<section class="slide">
+			<h2>Спасибо за внимание</h2>
+			<p>Куар-код на опрос</p>
 		</section>
 
 		<footer class="badge">
