@@ -6,47 +6,86 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 		<link rel="stylesheet" href="shower/themes/ribbon/styles/styles.css" />
 		<style>
+			@font-face {
+				font-family: 'Jura';
+				src: url('fonts/Jura-Medium.ttf') format('truetype');
+				font-weight: 500;
+				font-style: normal;
+				font-display: swap;
+			}
+
+			@font-face {
+				font-family: 'Jura';
+				src: url('fonts/Jura-Bold.ttf') format('truetype');
+				font-weight: 700;
+				font-style: normal;
+				font-display: swap;
+			}
+
 			.shower {
 				--slide-ratio: calc(16 / 9);
 				--color-blue: #2793ED;
+				--color-pink: #FF00FE;
+				--color-light: #F0F0FF;
+				--font-color: #333365;
 				--progress-size: 5px;
+				font-family: 'Jura', sans-serif;
+				color: var(--font-color);
 			}
 			.slide {
 				padding: 40px;
-				background-color: #F0F0FF;
+				background-color: var(--color-light);
+			}
+			.slide:after {
+				color: var(--color-blue);
+				background: none;
+				top: 37px;
+				left: unset;
+				right: 55px;
+				font-size: 30px;
+				padding-top: 0;
+				text-align: right;
 			}
 			.slide.title {
-				background-image: linear-gradient(32deg, #F0F0FF 20%, rgb(39 147 237 / 70%) 35%, rgb(255 0 254 / 60%) 65%, #F0F0FF 75%);
+				background-image: linear-gradient(32deg, var(--color-light) 20%, rgb(39 147 237 / 70%) 35%, rgb(255 0 254 / 60%) 65%, var(--color-light) 75%);
 			}
 			.slide.title:after {
 				opacity: 0;
 			}
 			.content {
 				border: 2px solid;
-				border-image: linear-gradient(101.55deg, #FF00FE 0%, var(--color-blue) 100%);
+				border-image: linear-gradient(101.55deg, var(--color-pink) 0%, var(--color-blue) 100%);
     			border-image-slice: 1;
 				height: 100%;
-				background-color: #F0F0FF;
+				background-color: var(--color-light);
 				padding: 20px 50px;
 				box-sizing: border-box;
+				font-size: 21px;
 			}
 			.progress {
 				bottom: 18px;
 			}
 			.progress:before {
-				background-image: linear-gradient(to right, transparent 50%, var(--color-blue));
+				background-image: linear-gradient(to right, transparent 30%, var(--color-blue));
 				background-color: unset;
 				transform: none;
 			}
-			.slide h1 {
+			.slide h1.shout {
 				margin: 0;
+				font-size: 60px;
 			}
 			.slide h2 {
 				margin-top: 0;
 				margin-bottom: 20px;
+				color: var(--font-color);
+				font-family: 'Jura', sans-serif;
+				font-size: 40px;
 			}
 			.slide p {
 				margin: 0;
+			}
+			.slide a {
+				color: inherit;
 			}
 		</style>
 	</head>
@@ -151,8 +190,8 @@
 			<div class="content">
 				<h2>Закон в Штатах</h2>
 				<ul>
-					<li>[ADA](https://www.ada.gov/)</li>
-					<li>[Section 508](https://www.section508.gov/)</li>
+					<li><a href="https://www.ada.gov/">ADA</a></li>
+					<li><a href="https://www.section508.gov/">Section 508</a></li>
 					<li>Штрафы</li>
 					<li>Прецедентная система, более 4000 дел за 2021 год</li>
 				</ul>
@@ -187,7 +226,7 @@
 		<section class="slide">
 			<div class="content">
 				<h2>Закон в других странах</h2>
-				<p>https://dynomapper.com/blog/27-accessibility-testing/532-international-web-accessibility-laws-and-policies</p>
+				<a href="https://dynomapper.com/blog/27-accessibility-testing/532-international-web-accessibility-laws-and-policies">International Web Accessibility Laws And Policies</a>
 			</div>
 		</section>
 
