@@ -8,6 +8,35 @@
 		<style>
 			.shower {
 				--slide-ratio: calc(16 / 9);
+				--color-blue: #2793ED;
+				--progress-size: 5px;
+			}
+			.slide {
+				padding: 40px;
+				background-color: #F0F0FF;
+			}
+			.slide.title {
+				background-image: linear-gradient(32deg, #F0F0FF 20%, rgb(39 147 237 / 70%) 35%, rgb(255 0 254 / 60%) 65%, #F0F0FF 75%);
+			}
+			.slide.title:after {
+				opacity: 0;
+			}
+			.content {
+				border: 2px solid;
+				border-image: linear-gradient(101.55deg, #FF00FE 0%, var(--color-blue) 100%);
+    			border-image-slice: 1;
+				height: 100%;
+				background-color: #F0F0FF;
+				padding: 20px 50px;
+				box-sizing: border-box;
+			}
+			.progress {
+				bottom: 18px;
+			}
+			.progress:before {
+				background-image: linear-gradient(to right, transparent 50%, var(--color-blue));
+				background-color: unset;
+				transform: none;
 			}
 			.slide h1 {
 				margin: 0;
@@ -27,278 +56,337 @@
 			<p>Lena Ryan</p>
 		</header>
 
-		<section class="slide" id="cover">
-			<h1 class="shout">State Of A11y</h1>
+		<section class="slide title" id="cover">
+			<div class="content">
+				<h1 class="shout">State Of A11y</h1>
+			</div>
 		</section>
 
 		<section class="slide">
-			<h2>Lena Ryan</h2>
-			<ul>
-				<li>Делаю фронт в X5 Group</li>
-				<li>Приношу новости в "Веб-стандарты"</li>
-				<li>Борец за вёрстку кнопок кнопками</li>
-				<li>Амбассадор WTM</li>
-				<li>Помогаю в WDA</li>
-				<li>Мама, я скейтер</li>
-			</ul>
+			<div class="content">
+				<h2>Lena Ryan</h2>
+				<ul>
+					<li>Делаю фронт в X5 Group</li>
+					<li>Приношу новости в "Веб-стандарты"</li>
+					<li>Борец за вёрстку кнопок кнопками</li>
+					<li>Амбассадор WTM</li>
+					<li>Помогаю в WDA</li>
+					<li>Мама, я скейтер</li>
+				</ul>
+			</div>
 		</section>
 
 		<section class="slide">
-			<h2>План</h2>
-			<ul>
-				<li>Что такое "доступность"?</li>
-				<li>Зачем?</li>
-				<li>Обучение</li>
-				<li>Дизайн</li>
-				<li>Разработка</li>
-				<li>Тестирование</li>
-				<li>Уже в проде</li>
-				<li>Тренды, перспективы</li>
-			</ul>
+			<div class="content">
+				<ul>
+					Результат - Готовлю новый доклад про доступность, мнения?
+					<li>Может, хватит уже?</li>
+					<li>Больше докладов про доступность!</li>
+					<li>А что это?</li>
+				</ul>
+			</div>
 		</section>
 
 		<section class="slide">
-			<h2></h2>
-			<ul>
-				Результат - Готовлю новый доклад про доступность, мнения?
-				<li>Может, хватит уже?</li>
-				<li>Больше докладов про доступность!</li>
-				<li>А что это?</li>
-			</ul>
+			<div class="content">
+				<h2>План</h2>
+				<ul>
+					<li>Что такое "доступность"?</li>
+					<li>Зачем?</li>
+					<li>Обучение</li>
+					<li>Дизайн</li>
+					<li>Разработка</li>
+					<li>Тестирование</li>
+					<li>Уже в проде</li>
+					<li>Тренды, перспективы</li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="slide title">
+			<div class="content">
+				<h1 class="shout">Что такое доступность</h1>
+			</div>
 		</section>
 
 		<section class="slide">
-			<h2>Что такое доступность</h2>
+			<div class="content">
+				<ul>
+					Результат — Почему ты НЕ внедряешь доступность на сайтах/в приложениях?
+					<li>Не хочу</li>
+					<li>У нас нет таких клиентов</li>
+					<li>Хочу, но не умею / нельзя</li>
+					<li>Внедряю!</li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="slide title">
+			<div class="content">
+				<h1 class="shout">Зачем?</h1>
+			</div>
 		</section>
 
 		<section class="slide">
-			<h2></h2>
-			<ul>
-				Результат — Почему ты НЕ внедряешь доступность на сайтах/в приложениях?
-				<li>Не хочу</li>
-				<li>У нас нет таких клиентов</li>
-				<li>Хочу, но не умею / нельзя</li>
-				<li>Внедряю!</li>
-			</ul>
+			<div class="content">
+				<h2>Зачем внедрять доступность (процент слабовидящих, виды нарушений, временные ограничения)</h2>
+				<p>15% (> 1 млрд) - ограничения</p>
+				<p>2-4% - значительные трудности</p>
+			</div>
 		</section>
 
 		<section class="slide">
-			<h1 class="shout">Зачем?</h1>
+			<div class="content">
+				<ul>
+					Результат — Почему ты внедряешь доступность на сайтах/в приложениях?
+					<li>Это помогает людям</li>
+					<li>Просто нравится</li>
+					<li>Сказали делать / положено по закону</li>
+					<li>Не внедряю</li>
+				</ul>
+			</div>
 		</section>
 
 		<section class="slide">
-			<h2>Зачем внедрять доступность (процент слабовидящих, виды нарушений, временные ограничения)</h2>
-			<p>15% (> 1 млрд) - ограничения</p>
-			<p>2-4% - значительные трудности</p>
+			<div class="content">
+				<h2>Закон в Штатах</h2>
+				<ul>
+					<li>[ADA](https://www.ada.gov/)</li>
+					<li>[Section 508](https://www.section508.gov/)</li>
+					<li>Штрафы</li>
+					<li>Прецедентная система, более 4000 дел за 2021 год</li>
+				</ul>
+			</div>
 		</section>
 
 		<section class="slide">
-			<h2></h2>
-			<ul>
-				Результат — Почему ты внедряешь доступность на сайтах/в приложениях?
-				<li>Это помогает людям</li>
-				<li>Просто нравится</li>
-				<li>Сказали делать / положено по закону</li>
-				<li>Не внедряю</li>
-			</ul>
+			<div class="content">
+				<h2>Закон в Европе</h2>
+				<ul>
+					<li>Web Accessibility Directive</li>
+					<li>European Accessibility Act</li>
+					<li>European standard EN 301 549 “Accessibility requirements for ICT products and services”</li>
+					<li>Собираются вводить штрафы (ПРОВЕРИТЬ)</li>
+				</ul>
+			</div>
 		</section>
 
 		<section class="slide">
-			<h2>Закон в Штатах</h2>
-			<ul>
-				<li>[ADA](https://www.ada.gov/)</li>
-				<li>[Section 508](https://www.section508.gov/)</li>
-				<li>Штрафы</li>
-				<li>Прецедентная система, более 4000 дел за 2021 год</li>
-			</ul>
+			<div class="content">
+				<h2>Закон в России</h2>
+				<ul>
+					<li>Приказ Минкомсвязи России №483</li>
+					<li>ГОСТ Р 52872-2019 — Интернет-ресурсы и другая информация, представленная в электронно-цифровой форме. Приложения для стационарных и мобильных устройств, иные пользовательские интерфейсы. Требования доступности для людей с инвалидностью и других лиц с ограничениями жизнедеятельности
+						<br>
+						Введён 01.04.2020</li>
+					<li>Прецеденты</li>
+				</ul>
+			</div>
 		</section>
 
 		<section class="slide">
-			<h2>Закон в Европе</h2>
-			<ul>
-				<li>Web Accessibility Directive</li>
-				<li>European Accessibility Act</li>
-				<li>European standard EN 301 549 “Accessibility requirements for ICT products and services”</li>
-				<li>Собираются вводить штрафы (ПРОВЕРИТЬ)</li>
-			</ul>
+			<div class="content">
+				<h2>Закон в других странах</h2>
+				<p>https://dynomapper.com/blog/27-accessibility-testing/532-international-web-accessibility-laws-and-policies</p>
+			</div>
+		</section>
+
+		<section class="slide title">
+			<div class="content">
+				<h1 class="shout">Обучение</h1>
+			</div>
 		</section>
 
 		<section class="slide">
-			<h2>Закон в России</h2>
-			<ul>
-				<li>Приказ Минкомсвязи России №483</li>
-				<li>ГОСТ Р 52872-2019 — Интернет-ресурсы и другая информация, представленная в электронно-цифровой форме. Приложения для стационарных и мобильных устройств, иные пользовательские интерфейсы. Требования доступности для людей с инвалидностью и других лиц с ограничениями жизнедеятельности
-					<br>
-					Введён 01.04.2020</li>
-				<li>Прецеденты</li>
-			</ul>
+			<div class="content">
+				<ul>
+					Результат — Где ты учился/-лась внедрять доступность? Если курсы, то какие?
+					<li>Спеки, YouTube, статьи</li>
+					<li>У ментора</li>
+					<li>На курсах</li>
+				</ul>
+			</div>
 		</section>
 
 		<section class="slide">
-			<h2>Закон в других странах</h2>
-            <p>https://dynomapper.com/blog/27-accessibility-testing/532-international-web-accessibility-laws-and-policies</p>
+			<div class="content">
+				<h2>Обучение</h2>
+				<p>Спецификации</p>
+				<p>Стримы на ютубе с доступной вёрсткой</p>
+				<p>Курсы</p>
+				<p>Обучающие статьи</p>
+				<p>Обновляющиеся спеки</p>
+				<p>Сообщества про доступность</p>
+				<p>Митапы и мероприятия</p>
+				<p>Рассылки</p>
+			</div>
+		</section>
+
+		<section class="slide title">
+			<div class="content">
+				<h1 class="shout">Дизайн</h1>
+			</div>
 		</section>
 
 		<section class="slide">
-			<h1 class="shout">Обучение</h1>
+			<div class="content">
+				<h2>Доступные цветовые схемы</h2>
+				<p>http://colorsafe.co — доступные цветовые палитры, которые сделаны по рекомендациям WCAG</p>
+				<p>https://jxnblk.github.io/colorable/</p>
+				<p>https://color.adobe.com/ и https://colorscheme.ru/ — подборка цветовой палитры с настройкой доступности</p>
+				<p>Полное тестирование контрастности:</p>
+				<p>https://webaim.org/resources/contrastchecker/ - Color Contrast Checker</p>
+				<p>https://www.paciellogroup.com/resources/contrastanalyser/ - Color Contrast Analyzer</p>
+			</div>
+		</section>
+
+		<section class="slide title">
+			<div class="content">
+				<h1 class="shout">Разработка</h1>
+			</div>
 		</section>
 
 		<section class="slide">
-			<h2></h2>
-			<ul>
-				Результат — Где ты учился/-лась внедрять доступность? Если курсы, то какие?
-				<li>Спеки, YouTube, статьи</li>
-				<li>У ментора</li>
-				<li>На курсах</li>
-			</ul>
-		</section>
-
-		<section class="slide">
-			<h2>Обучение</h2>
-			<p>Спецификации</p>
-			<p>Стримы на ютубе с доступной вёрсткой</p>
-            <p>Курсы</p>
-            <p>Обучающие статьи</p>
-            <p>Обновляющиеся спеки</p>
-            <p>Сообщества про доступность</p>
-            <p>Митапы и мероприятия</p>
-            <p>Рассылки</p>
-		</section>
-
-		<section class="slide">
-			<h1 class="shout">Дизайн</h1>
-		</section>
-
-		<section class="slide">
-			<h2>Доступные цветовые схемы</h2>
-            <p>http://colorsafe.co — доступные цветовые палитры, которые сделаны по рекомендациям WCAG</p>
-			<p>https://jxnblk.github.io/colorable/</p>
-            <p>https://color.adobe.com/ и https://colorscheme.ru/ — подборка цветовой палитры с настройкой доступности</p>
-			<p>Полное тестирование контрастности:</p>
-			<p>https://webaim.org/resources/contrastchecker/ - Color Contrast Checker</p>
-			<p>https://www.paciellogroup.com/resources/contrastanalyser/ - Color Contrast Analyzer</p>
-		</section>
-
-		<section class="slide">
-			<h1 class="shout">Разработка</h1>
-		</section>
-
-		<section class="slide">
-			<h2></h2>
-			<ul>
-				Результат — Тебе нужно сделать свой сайт доступным. Как ты поступишь?
-				<li>Немного допишу свой сайт</li>
-				<li>Сделаю версию для слабовидящих</li>
-			</ul>
+			<div class="content">
+				<ul>
+					Результат — Тебе нужно сделать свой сайт доступным. Как ты поступишь?
+					<li>Немного допишу свой сайт</li>
+					<li>Сделаю версию для слабовидящих</li>
+				</ul>
+			</div>
 		</section>
 
         <section class="slide">
-			<h2>Что-то про версии для слабовидящих?</h2>
-			<p>Мой доклад с Фронтендконф — https://www.youtube.com/watch?v=ztBwWDFko6E</p>
-            <p>Можно про семантику и ARIA-атрибуты - типа минимально позволит сделать доступный сайт</p>
-            <p>В новом ГОСТЕ ни слова про отдельную версию</p>
+			<div class="content">
+				<h2>Что-то про версии для слабовидящих?</h2>
+				<p>Мой доклад с Фронтендконф — https://www.youtube.com/watch?v=ztBwWDFko6E</p>
+				<p>Можно про семантику и ARIA-атрибуты - типа минимально позволит сделать доступный сайт</p>
+				<p>В новом ГОСТЕ ни слова про отдельную версию</p>
+			</div>
 		</section>
 
 		<section class="slide">
-			<h2>Доступность в Ангуляр</h2>
-            <p>Angular Material https://material.angular.io</p>
-            <p>Доклад Глафиры Жур https://www.youtube.com/watch?v=RFs3A0eqM64</p>
-			<p>Syncfusion Angular UI — https://ej2.syncfusion.com/angular/documentation/introduction/</p>
-			<p>Поддерживаются ARIA-атрибуты</p>
-			<p>@angular/cdk/a11y</p>
-			<p>@angular-eslint</p>
+			<div class="content">
+				<h2>Доступность в Ангуляр</h2>
+				<p>Angular Material https://material.angular.io</p>
+				<p>Доклад Глафиры Жур https://www.youtube.com/watch?v=RFs3A0eqM64</p>
+				<p>Syncfusion Angular UI — https://ej2.syncfusion.com/angular/documentation/introduction/</p>
+				<p>Поддерживаются ARIA-атрибуты</p>
+				<p>@angular/cdk/a11y</p>
+				<p>@angular-eslint</p>
+			</div>
 		</section>
 
 		<section class="slide">
-			<h2>Доступность в Реакте</h2>
-			<p>Поддерживаются ARIA-атрибуты</p>
-			<p>eslint-plugin-jsx-a11y</p>
-			<p>react-axe (@axe-core/react)</p>
-			<p>React Aria</p>
+			<div class="content">
+				<h2>Доступность в Реакте</h2>
+				<p>Поддерживаются ARIA-атрибуты</p>
+				<p>eslint-plugin-jsx-a11y</p>
+				<p>react-axe (@axe-core/react)</p>
+				<p>React Aria</p>
+			</div>
 		</section>
 
 		<section class="slide">
-			<h2>Доступность во Вью</h2>
-			<p>Сообщество Vue A11y</p>
-			<p>Тут части из моего доклада https://lenaryan.github.io/vue-plus-ally/</p>
+			<div class="content">
+				<h2>Доступность во Вью</h2>
+				<p>Сообщество Vue A11y</p>
+				<p>Тут части из моего доклада https://lenaryan.github.io/vue-plus-ally/</p>
+			</div>
 		</section>
 
 		<section class="slide">
-			<h2>Доступность в Андроид</h2>
-			<p>Виктор Вихров — Адаптация приложения для незрячих - https://www.youtube.com/watch?v=krMqOJxQRfs</p>
-			<p>https://www.24a11y.com/2018/android-accessibility-at-airbnb/</p>
-			<p>Книга Android Accessibility by Tutorials https://www.raywenderlich.com/books/android-accessibility-by-tutorials/v1.0.ea1</p>
+			<div class="content">
+				<h2>Доступность в Андроид</h2>
+				<p>Виктор Вихров — Адаптация приложения для незрячих - https://www.youtube.com/watch?v=krMqOJxQRfs</p>
+				<p>https://www.24a11y.com/2018/android-accessibility-at-airbnb/</p>
+				<p>Книга Android Accessibility by Tutorials https://www.raywenderlich.com/books/android-accessibility-by-tutorials/v1.0.ea1</p>
+			</div>
 		</section>
 
 		<section class="slide">
-			<h2>Доступность в iOS</h2>
-			<p>Книга Михаила Рубанова «Про доступность iOS» - https://rubanov.dev/a11y-book/</p>
-			<p>обложка_книги.жпг</p>
+			<div class="content">
+				<h2>Доступность в iOS</h2>
+				<p>Книга Михаила Рубанова «Про доступность iOS» - https://rubanov.dev/a11y-book/</p>
+				<p>обложка_книги.жпг</p>
+			</div>
+		</section>
+
+		<section class="slide title">
+			<div class="content">
+				<h1 class="shout">Тестирование</h1>
+			</div>
 		</section>
 
 		<section class="slide">
-			<h1 class="shout">Тестирование</h1>
+			<div class="content">
+				<ul>
+					Результат — Как ты тестируешь доступность?
+					<li>Руками</li>
+					<li>Автоматически</li>
+					<li>И так, и так</li>
+					<li>На целевом пользователе</li>
+				</ul>
+			</div>
 		</section>
 
 		<section class="slide">
-			<h2></h2>
-			<ul>
-				Результат — Как ты тестируешь доступность?
-				<li>Руками</li>
-				<li>Автоматически</li>
-				<li>И так, и так</li>
-				<li>На целевом пользователе</li>
-			</ul>
+			<div class="content">
+				<h2>Тестирование</h2>
+				<p>axe, wave, lighthouse, nu html validator, devtools accessibility tab, acessibility tree, visual deficiencies emulation</p>
+				<p>axe accessibility linter</p>
+				<p>Скринридеры</p>
+			</div>
+		</section>
+
+		<section class="slide title">
+			<div class="content">
+				<h1 class="shout">Уже в проде</h1>
+			</div>
 		</section>
 
 		<section class="slide">
-			<h2>Тестирование</h2>
-            <p>axe, wave, lighthouse, nu html validator, devtools accessibility tab, acessibility tree, visual deficiencies emulation</p>
-			<p>axe accessibility linter</p>
-			<p>Скринридеры</p>
+			<div class="content">
+				<h2>Что сделано на данный момент</h2>
+				<p>Доступные сайты</p>
+				<p>Доступные приложения Яндекса (такси)</p>
+				<p>
+					Yandex Go —
+					<a href="https://habr.com/ru/company/yandex/blog/660663/](https://habr.com/ru/company/yandex/blog/660663/"></a>
+						Статья на Хабре
+					</a>
+				</p>
+				<p>Доступные приложения Сбера (Сбербанк Онлайн)</p>
+				<p>Доступные игры (TLOU и т.д.)</p>
+			</div>
 		</section>
 
 		<section class="slide">
-			<h1 class="shout">Уже в проде</h1>
+			<div class="content">
+				<h2>Доступные девайсы</h2>
+				<p>[https://twitter.com/tomwarren/status/1524041582709645312?t=1SVgvatEXaxw6T62-xEuFw]
+					- доступные контроллеры от Майкрософт</p>
+			</div>
 		</section>
 
 		<section class="slide">
-			<h2>Что сделано на данный момент</h2>
-			<p>Доступные сайты</p>
-			<p>Доступные приложения Яндекса (такси)</p>
-			<p>
-				Yandex Go —
-				<a href="https://habr.com/ru/company/yandex/blog/660663/](https://habr.com/ru/company/yandex/blog/660663/"></a>
-					Статья на Хабре
-				</a>
-			</p>
-			<p>Доступные приложения Сбера (Сбербанк Онлайн)</p>
-			<p>Доступные игры (TLOU и т.д.)</p>
+			<div class="content">
+				<h2>Тренды и перспективы</h2>
+				<p>Профессии с алли — спецы по внедрению, консультанты</p>
+			</div>
 		</section>
 
 		<section class="slide">
-			<h2>Доступные девайсы</h2>
-            <p>[https://twitter.com/tomwarren/status/1524041582709645312?t=1SVgvatEXaxw6T62-xEuFw]
-                - доступные контроллеры от Майкрософт</p>
+			<div class="content">
+				<h2>Контакты</h2>
+			</div>
 		</section>
 
-		<section class="slide">
-			<h2>Тренды в развитии доступности</h2>
-            <p>Профессии с алли — спецы по внедрению, консультанты</p>
-		</section>
-		
-        <section class="slide">
-			<h2>Перспективы по развитию доступности</h2>
-			<p>Тут пока хз</p>
-		</section>
-
-		<section class="slide">
-			<h2>Контакты</h2>
-		</section>
-
-		<section class="slide">
-			<h2>Спасибо за внимание</h2>
-			<p>Куар-код на опрос</p>
+		<section class="slide title">
+			<div class="content">
+				<h2>Спасибо за внимание</h2>
+				<p>Куар-код на опрос</p>
+			</div>
 		</section>
 
 		<footer class="badge">
