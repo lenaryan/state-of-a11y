@@ -76,16 +76,70 @@
 			}
 			.slide h2 {
 				margin-top: 0;
-				margin-bottom: 20px;
+				margin-bottom: 35px;
 				color: var(--font-color);
 				font-family: 'Jura', sans-serif;
 				font-size: 40px;
+				line-height: 1.3;
 			}
 			.slide p {
 				margin: 0;
 			}
 			.slide a {
 				color: inherit;
+			}
+			.slide img {
+				display: block;
+				max-width: 100%;
+				border: 2px solid var(--color-blue);
+			}
+			.slide ul {
+				margin-bottom: 0;
+			}
+			.slide .ul-left {
+				padding-left: 30px;
+			}
+			.slide .ul-right {
+				text-align: right;
+				padding-right: 30px;
+			}
+			.slide ul > li {
+				position: relative;
+				margin-bottom: 10px;
+			}
+			.slide ul > li::before {
+				content: '';
+				width: 10px;
+				height: 1em;
+				top: calc(50% - 0.5em);
+				opacity: 1;
+			}
+			.slide .ul-left > li::before {
+				background-color: var(--color-pink);
+				transform: translateX(-30px);
+			}
+			.slide .ul-right > li::before {
+				background-color: var(--color-blue);
+				right: -50px;
+			}
+			.slide ul > li::after {
+				content: '';
+				width: 50px;
+				height: 2px;
+				top: calc(50% - 1px);
+				position: absolute;
+			}
+			.slide .ul-left > li::after {
+				background-color: var(--color-pink);
+				left: -80px;
+			}
+			.slide .ul-right > li::after {
+				background-color: var(--color-blue);
+				right: -80px;
+			}
+			.flex-between {
+				display: flex;
+				justify-content: space-between;
 			}
 		</style>
 	</head>
@@ -101,18 +155,34 @@
 			</div>
 		</section>
 
-		<section class="slide">
+		<section class="slide" id="about">
 			<div class="content">
 				<h2>Lena Ryan</h2>
-				<ul>
-					<li>Делаю фронт в X5 Group</li>
-					<li>Приношу новости в "Веб-стандарты"</li>
-					<li>Борец за вёрстку кнопок кнопками</li>
-					<li>Амбассадор WTM</li>
-					<li>Помогаю в WDA</li>
-					<li>Мама, я скейтер</li>
-				</ul>
+				<div class="flex-between">
+					<ul class="ul-left">
+						<li>Делаю фронт в X5 Group</li>
+						<li>Приношу новости в "Веб-стандарты"</li>
+						<li>Борец за вёрстку кнопок кнопками</li>
+						<li>Амбассадор WTM</li>
+						<li>Помогаю в WDA</li>
+						<li>Мама, я скейтер</li>
+					</ul>
+					<img src="pictures/me.jpg" alt="Lena Ryan">
+				</div>
 			</div>
+
+			<style>
+				#about .flex-between {
+					gap: 20px;
+				}
+
+				#about img {
+					width: 290px;
+					position: relative;
+					top: -84px;
+					right: 20px;
+				}
+			</style>
 		</section>
 
 		<section class="slide">
@@ -129,16 +199,20 @@
 		<section class="slide">
 			<div class="content">
 				<h2>План</h2>
-				<ul>
-					<li>Что такое "доступность"?</li>
-					<li>Зачем?</li>
-					<li>Обучение</li>
-					<li>Дизайн</li>
-					<li>Разработка</li>
-					<li>Тестирование</li>
-					<li>Уже в проде</li>
-					<li>Тренды, перспективы</li>
-				</ul>
+				<div class="columns two">
+					<ul class="ul-left">
+						<li class="next">Что такое "доступность"?</li>
+						<li class="next">Зачем?</li>
+						<li class="next">Обучение</li>
+						<li class="next">Дизайн</li>
+					</ul>
+					<ul class="ul-right">
+						<li class="next">Разработка</li>
+						<li class="next">Тестирование</li>
+						<li class="next">Уже в проде</li>
+						<li class="next">Тренды, перспективы</li>
+					</ul>
+				</div>
 			</div>
 		</section>
 
