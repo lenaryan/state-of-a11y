@@ -141,6 +141,21 @@
 				display: flex;
 				justify-content: space-between;
 			}
+			.slide .poll-img {
+				max-height: 100%;
+				margin: auto;
+			}
+			.slide mark {
+				background-color: rgb(255 0 254 / 30%);
+				padding: 0;
+				box-shadow: 0 0 5px rgb(255 0 254 / 50%);
+				text-shadow: 0 0 10px var(--color-pink);
+				color: inherit;
+			}
+
+			.copyright {
+				bottom: 40px;
+			}
 		</style>
 	</head>
 	<body class="shower list">
@@ -160,14 +175,15 @@
 				<h2>Lena Ryan</h2>
 				<div class="flex-between">
 					<ul class="ul-left">
-						<li>Делаю фронт в X5 Group</li>
+						<li class="li-flex">Делаю фронт в <img class="x5-logo" src="pictures/x5_tech.png" alt="X5 Tech"/></li>
 						<li>Приношу новости в "Веб-стандарты"</li>
 						<li>Борец за вёрстку кнопок кнопками</li>
 						<li>Амбассадор WTM</li>
 						<li>Помогаю в WDA</li>
+						<li>Немного ментор</li>
 						<li>Мама, я скейтер</li>
 					</ul>
-					<img src="pictures/me.jpg" alt="Lena Ryan">
+					<img class="me" src="pictures/me.jpg" alt="Lena Ryan">
 				</div>
 			</div>
 
@@ -176,7 +192,20 @@
 					gap: 20px;
 				}
 
-				#about img {
+				#about .li-flex {
+					display: flex;
+					align-items: flex-end;
+					height: 2em;
+				}
+
+				#about .x5-logo {
+					border: none;
+					width: 130px;
+					position: relative;
+					top: 3px;
+				}
+
+				#about .me {
 					width: 290px;
 					position: relative;
 					top: -84px;
@@ -187,12 +216,7 @@
 
 		<section class="slide">
 			<div class="content">
-				<ul>
-					Результат - Готовлю новый доклад про доступность, мнения?
-					<li>Может, хватит уже?</li>
-					<li>Больше докладов про доступность!</li>
-					<li>А что это?</li>
-				</ul>
+				<img class="poll-img" src="pictures/question-1.jpg" alt="results">
 			</div>
 		</section>
 
@@ -222,15 +246,58 @@
 			</div>
 		</section>
 
+		<section class="slide" id="quote">
+			<div class="content">
+				<img src="pictures/pink-quote.svg" class="pink-quote" alt="" role="presentation">
+				<img src="pictures/blue-quote.svg" class="blue-quote" alt="" role="presentation">
+				<blockquote>
+					<p>Доступность контента — это специальные технические и&nbsp;архитектурные решения, которые помогают людям с&nbsp;ограниченными возможностями использовать сайты. [...] Термин <mark>«доступность контента»</mark> также может обозначаться аббревиатурой <mark>"a11y"</mark></p>
+					<figcaption>Из документации ReactJS</figcaption>
+				</blockquote>
+				<a href="https://ru.reactjs.org/docs/accessibility.html" class="copyright">Документация React JS по доступности</a>
+			</div>
+
+			<style>
+				#quote blockquote {
+					font-style: normal;
+				}
+
+				#quote blockquote::before {
+					display: none;
+				}
+
+				#quote blockquote p {
+					font-size: 28px;
+					line-height: 1.3;
+					margin: 11% 13% 10px;
+				}
+
+				#quote figcaption {
+					margin: 0 13%;
+    				font-weight: bold;
+				}
+
+				#quote img {
+					border: none;
+					position: absolute;
+					width: 30px;
+				}
+
+				#quote .pink-quote {
+					left: 14%;
+					top: 20%;
+				}
+
+				#quote .blue-quote {
+					right: 17%;
+    				bottom: 27%;
+				}
+			</style>
+		</section>
+
 		<section class="slide">
 			<div class="content">
-				<ul>
-					Результат — Почему ты НЕ внедряешь доступность на сайтах/в приложениях?
-					<li>Не хочу</li>
-					<li>У нас нет таких клиентов</li>
-					<li>Хочу, но не умею / нельзя</li>
-					<li>Внедряю!</li>
-				</ul>
+				<img class="poll-img" src="pictures/question-2.jpg" alt="results">
 			</div>
 		</section>
 
@@ -242,21 +309,30 @@
 
 		<section class="slide">
 			<div class="content">
-				<h2>Зачем внедрять доступность (процент слабовидящих, виды нарушений, временные ограничения)</h2>
-				<p>15% (> 1 млрд) - ограничения</p>
-				<p>2-4% - значительные трудности</p>
+				<h2>Аудитория</h2>
+				<div class="columns two">
+					<ul class="ul-left">
+						<li class="next">15% (> 1 млрд чел) - ограничения</li>
+						<li class="next">2-4% - значительные трудности</li>
+						<li class="next">Болезни глаз</li>
+						<li class="next">Дальтонизм</li>
+						<li class="next">Дислексия</li>
+						<li class="next">Психосоматика</li>
+						<li class="next">Отсутствие конечностей</li>
+					</ul>
+					<ul class="ul-right">
+						<li class="next">Грязные руки</li>
+						<li class="next">Сломанная рука</li>
+						<li class="next">Руки заняты</li>
+						<li class="next">Операция на глаза</li>
+					</ul>
+				</div>
 			</div>
 		</section>
 
 		<section class="slide">
 			<div class="content">
-				<ul>
-					Результат — Почему ты внедряешь доступность на сайтах/в приложениях?
-					<li>Это помогает людям</li>
-					<li>Просто нравится</li>
-					<li>Сказали делать / положено по закону</li>
-					<li>Не внедряю</li>
-				</ul>
+				<img class="poll-img" src="pictures/question-3.jpg" alt="results">
 			</div>
 		</section>
 
@@ -289,9 +365,7 @@
 				<h2>Закон в России</h2>
 				<ul>
 					<li>Приказ Минкомсвязи России №483</li>
-					<li>ГОСТ Р 52872-2019 — Интернет-ресурсы и другая информация, представленная в электронно-цифровой форме. Приложения для стационарных и мобильных устройств, иные пользовательские интерфейсы. Требования доступности для людей с инвалидностью и других лиц с ограничениями жизнедеятельности
-						<br>
-						Введён 01.04.2020</li>
+					<li>ГОСТ Р 52872-2019 — Интернет-ресурсы и другая информация, представленная в электронно-цифровой форме...</li>
 					<li>Прецеденты</li>
 				</ul>
 			</div>
@@ -312,12 +386,7 @@
 
 		<section class="slide">
 			<div class="content">
-				<ul>
-					Результат — Где ты учился/-лась внедрять доступность? Если курсы, то какие?
-					<li>Спеки, YouTube, статьи</li>
-					<li>У ментора</li>
-					<li>На курсах</li>
-				</ul>
+				<img class="poll-img" src="pictures/question-5.jpg" alt="results">
 			</div>
 		</section>
 
@@ -344,12 +413,14 @@
 		<section class="slide">
 			<div class="content">
 				<h2>Доступные цветовые схемы</h2>
-				<p>http://colorsafe.co — доступные цветовые палитры, которые сделаны по рекомендациям WCAG</p>
-				<p>https://jxnblk.github.io/colorable/</p>
-				<p>https://color.adobe.com/ и https://colorscheme.ru/ — подборка цветовой палитры с настройкой доступности</p>
-				<p>Полное тестирование контрастности:</p>
-				<p>https://webaim.org/resources/contrastchecker/ - Color Contrast Checker</p>
-				<p>https://www.paciellogroup.com/resources/contrastanalyser/ - Color Contrast Analyzer</p>
+				<ul class="ul-left">
+					<li><a href="http://colorsafe.co">Colorsafe</a></li>
+					<li><a href="https://jxnblk.github.io/colorable/">Colorable</a></li>
+					<li><a href="https://color.adobe.com/">Color Adobe</a></li>
+					<li><a href="https://colorscheme.ru/">Colorscheme</a></li>
+					<li class="next"><a href="https://webaim.org/resources/contrastchecker/">Color Contrast Checker</a></li>
+					<li class="next"><a href="https://www.paciellogroup.com/resources/contrastanalyser/">Color Contrast Analyzer</a></li>
+				</ul>
 			</div>
 		</section>
 
@@ -361,32 +432,34 @@
 
 		<section class="slide">
 			<div class="content">
-				<ul>
-					Результат — Тебе нужно сделать свой сайт доступным. Как ты поступишь?
-					<li>Немного допишу свой сайт</li>
-					<li>Сделаю версию для слабовидящих</li>
-				</ul>
+				<img class="poll-img" src="pictures/question-4.jpg" alt="results">
 			</div>
 		</section>
 
         <section class="slide">
 			<div class="content">
-				<h2>Что-то про версии для слабовидящих?</h2>
-				<p>Мой доклад с Фронтендконф — https://www.youtube.com/watch?v=ztBwWDFko6E</p>
-				<p>Можно про семантику и ARIA-атрибуты - типа минимально позволит сделать доступный сайт</p>
-				<p>В новом ГОСТЕ ни слова про отдельную версию</p>
+				<h2>Версии для слабовидящих не нужны</h2>
+				<h3>Программа минимум:</h3>
+				<ul class="ul-left">
+					<li>Семантическая вёрстка</li>
+					<li>ARIA-атрибуты</li>
+				</ul>
+				<h3>В новом ГОСТе нет упоминаний отдельных версий сайтов</h3>
+				<a class="copyright" href="https://www.youtube.com/watch?v=ztBwWDFko6E">Тебе не нужна версия для слабовидящих (доклад)</a>
 			</div>
 		</section>
 
 		<section class="slide">
 			<div class="content">
 				<h2>Доступность в Ангуляр</h2>
-				<p>Angular Material https://material.angular.io</p>
-				<p>Доклад Глафиры Жур https://www.youtube.com/watch?v=RFs3A0eqM64</p>
-				<p>Syncfusion Angular UI — https://ej2.syncfusion.com/angular/documentation/introduction/</p>
-				<p>Поддерживаются ARIA-атрибуты</p>
-				<p>@angular/cdk/a11y</p>
-				<p>@angular-eslint</p>
+				<ul class="ul-left">
+					<li class="next"><a href="https://material.angular.io">Angular Material</a></li>
+					<li class="next"><a href="https://www.youtube.com/watch?v=RFs3A0eqM64">Доклад Глафиры Жур про Angular Material</a></li>
+					<li class="next"><a href="https://ej2.syncfusion.com/angular/documentation/introduction/">Syncfusion Angular UI</a></li>
+					<li class="next">Поддерживаются ARIA-атрибуты</li>
+					<li class="next">@angular/cdk/a11y</li>
+					<li class="next">@angular-eslint</li>
+				</ul>
 			</div>
 		</section>
 
@@ -433,13 +506,7 @@
 
 		<section class="slide">
 			<div class="content">
-				<ul>
-					Результат — Как ты тестируешь доступность?
-					<li>Руками</li>
-					<li>Автоматически</li>
-					<li>И так, и так</li>
-					<li>На целевом пользователе</li>
-				</ul>
+				<img class="poll-img" src="pictures/question-6.jpg" alt="results">
 			</div>
 		</section>
 
