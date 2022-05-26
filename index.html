@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Shower Presentation Engine</title>
+		<title>State Of A11y</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 		<link rel="stylesheet" href="shower/themes/ribbon/styles/styles.css" />
@@ -105,7 +105,8 @@
 			}
 			.slide ul > li {
 				position: relative;
-				margin-bottom: 10px;
+				margin-bottom: 25px;
+				line-height: 1.3;
 			}
 			.slide ul > li::before {
 				content: '';
@@ -154,7 +155,8 @@
 			}
 
 			.copyright {
-				bottom: 40px;
+				bottom: 50px;
+				right: 50px;
 			}
 		</style>
 	</head>
@@ -339,7 +341,7 @@
 		<section class="slide">
 			<div class="content">
 				<h2>Закон в Штатах</h2>
-				<ul>
+				<ul class="ul-left">
 					<li><a href="https://www.ada.gov/">Americans with Disabilities Act (ADA)</a></li>
 					<li><a href="https://www.section508.gov/">Section 508</a></li>
 					<li>Штрафы</li>
@@ -363,7 +365,7 @@
 		<section class="slide">
 			<div class="content">
 				<h2>Закон в Европе</h2>
-				<ul>
+				<ul class="ul-left">
 					<li class="next">Web Accessibility Directive</li>
 					<li class="next">European Accessibility Act</li>
 					<li class="next">European standard EN 301 549 “Accessibility requirements for ICT products and services”</li>
@@ -376,7 +378,7 @@
 		<section class="slide">
 			<div class="content">
 				<h2>Закон в России</h2>
-				<ul>
+				<ul class="ul-left">
 					<li class="next">Приказ Минкомсвязи России №483</li>
 					<li class="next">ГОСТ Р 52872-2019 — Интернет-ресурсы и другая информация, представленная в электронно-цифровой форме...</li>
 					<li class="next">Штрафы</li>
@@ -384,11 +386,18 @@
 			</div>
 		</section>
 
-		<section class="slide">
+		<section class="slide" id="law-other">
 			<div class="content">
 				<h2>Закон в других странах</h2>
-				<a href="https://dynomapper.com/blog/27-accessibility-testing/532-international-web-accessibility-laws-and-policies">International Web Accessibility Laws And Policies</a>
+				<img src="pictures/countries-law.png" alt="law in other countries">
+				<a class="copyright" href="https://dynomapper.com/blog/27-accessibility-testing/532-international-web-accessibility-laws-and-policies">International Web Accessibility Laws And Policies</a>
 			</div>
+
+			<style>
+				#law-other img {
+					height: 350px;
+				}
+			</style>
 		</section>
 
 		<section class="slide title">
@@ -556,23 +565,6 @@
 			</div>
 		</section>
 
-		<!-- <section class="slide">
-			<div class="content">
-				<h2>Доступность в Андроид</h2>
-				<p>Виктор Вихров — Адаптация приложения для незрячих - https://www.youtube.com/watch?v=krMqOJxQRfs</p>
-				<p>https://www.24a11y.com/2018/android-accessibility-at-airbnb/</p>
-				<p>Книга Android Accessibility by Tutorials https://www.raywenderlich.com/books/android-accessibility-by-tutorials/v1.0.ea1</p>
-			</div>
-		</section>
-
-		<section class="slide">
-			<div class="content">
-				<h2>Доступность в iOS</h2>
-				<p>Книга Михаила Рубанова «Про доступность iOS» - https://rubanov.dev/a11y-book/</p>
-				<p>обложка_книги.жпг</p>
-			</div>
-		</section> -->
-
 		<section class="slide title">
 			<div class="content">
 				<h1 class="shout">Тестирование</h1>
@@ -645,17 +637,602 @@
 			</div>
 		</section>
 
-		<section class="slide">
+		<section class="slide" id="contact">
 			<div class="content">
 				<h2>Контакты</h2>
+				<h3>Lena Ryan</h3>
+				<div class="columns two">
+					<div class="column">
+						<div class="contact-line">
+							<svg width="33" viewBox="0 0 67 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M67 7.32348C62.7854 7.51772 62.8774 7.50187 62.401 7.54175L64.897 0.413488C64.897 0.413488 57.1058 3.27961 55.1306 3.79232C49.9433 -0.870059 42.2328 -1.07606 36.7204 2.31197C32.2062 5.08711 29.7833 9.85274 30.5914 15.423C21.806 14.2038 14.4037 10.0393 8.55953 3.01892L6.71114 0.798909L5.32996 3.33533C3.58432 6.54036 3.00465 10.2049 3.69729 13.6538C3.9815 15.0687 4.46455 16.4182 5.13367 17.6818L3.54803 17.0674L3.35992 19.7168C3.16925 22.4081 4.06533 25.5497 5.7573 28.1199C6.23371 28.8437 6.84711 29.6386 7.6246 30.4227L6.8052 30.297L7.80505 33.3328C9.11926 37.3215 11.8489 40.4074 15.3913 42.1229C11.8535 43.6242 8.99556 44.5821 4.29791 46.1274L0 47.5402L3.96974 49.7107C5.48331 50.5382 10.8317 53.3021 16.1161 54.1313C27.8628 55.9735 41.0883 54.4732 49.9919 46.4545C57.4912 39.7004 59.952 30.093 59.4408 20.095C59.3636 18.5815 59.7782 17.1369 60.6083 16.0282C62.2712 13.8082 66.9898 7.3383 67 7.32348ZM57.4692 13.6768C56.0906 15.5175 55.4 17.8684 55.5237 20.2954C56.0395 30.3803 53.2955 38.2012 47.3675 43.5398C40.4427 49.7766 29.2731 52.2246 16.7239 50.2561C14.4513 49.8998 12.1024 49.1019 10.1585 48.305C14.097 46.9498 17.1385 45.7419 22.0503 43.4171L28.9071 40.1717L21.3367 39.6871C17.7105 39.4551 14.691 37.6977 12.835 34.8443C13.8205 34.7871 14.7708 34.6276 15.7169 34.3638L22.9372 32.3529L15.6566 30.5699C12.1188 29.7035 10.1022 27.5867 9.03339 25.9633C8.33155 24.8965 7.87303 23.8036 7.59802 22.7961C8.32797 22.9918 9.17907 23.1314 10.5516 23.2674L17.2903 23.9339L11.9511 19.7689C8.10408 16.7684 6.56239 12.2604 7.69259 7.92666C19.6989 20.3798 33.796 19.4438 35.215 19.773C34.9026 16.7392 34.8945 16.7321 34.8127 16.4433C32.9955 10.0194 36.978 6.75761 38.7742 5.65349C42.5262 3.3476 48.4819 3 52.607 6.79902C53.498 7.61893 54.7028 7.94148 55.8304 7.66136C56.8425 7.40986 57.6732 7.14354 58.4865 6.85371L56.7935 11.6884L58.9547 11.6899C58.5468 12.2368 58.0576 12.8916 57.4692 13.6768Z" fill="#FF00FE"/>
+							</svg>	
+							<a href="https://twitter.com/metalwebdev">@metalwebdev</a>					
+						</div>
+						<div class="contact-line">
+							<svg width="33" viewBox="0 0 67 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M65.9655 1.55191C65.1471 0.551041 63.9213 0 62.5136 0C61.7483 0 60.9376 0.161018 60.1044 0.479477L3.39018 22.129C0.380415 23.2776 -0.0249421 25.0013 0.00112749 25.9265C0.0271971 26.8517 0.529676 28.5498 3.59976 29.5267C3.61816 29.5323 3.63656 29.5379 3.65497 29.543L15.419 32.9096L21.781 51.1021C22.6485 53.5823 24.5955 55.123 26.8631 55.123C28.2928 55.123 29.699 54.5239 30.9299 53.3911L38.2064 46.6912L48.7606 55.1894C48.7616 55.1905 48.7631 55.191 48.7641 55.192L48.8643 55.2728C48.8735 55.2799 48.8832 55.2876 48.8924 55.2947C50.0656 56.2046 51.346 56.6851 52.5969 56.6856C55.0408 56.6856 56.9873 54.8766 57.5542 52.0774L66.8467 6.19282C67.2199 4.35107 66.9071 2.70306 65.9655 1.55191ZM19.3545 32.2701L42.0509 20.6753L27.9186 35.6919C27.6871 35.9378 27.523 36.2388 27.4422 36.5665L24.7172 47.6047L19.3545 32.2701ZM28.2703 50.503C28.1763 50.5894 28.0817 50.6666 27.9871 50.7377L30.5154 40.4979L35.1144 44.2013L28.2703 50.503ZM62.9992 5.41328L53.7066 51.2984C53.6172 51.7375 53.3314 52.7593 52.5969 52.7593C52.2339 52.7593 51.778 52.5615 51.3113 52.2022L39.352 42.5727C39.3504 42.5712 39.3484 42.5697 39.3463 42.5687L32.2304 36.8384L52.6674 15.1224C53.3217 14.4272 53.381 13.3625 52.808 12.5988C52.2345 11.8351 51.1953 11.5949 50.3452 12.0294L16.7317 29.2016L4.80765 25.79L61.5045 4.14712C61.9835 3.96412 62.3178 3.92578 62.5136 3.92578C62.6337 3.92578 62.8474 3.94009 62.9266 4.03773C63.0309 4.16501 63.1638 4.59899 62.9992 5.41328Z" fill="#FF00FE"/>
+							</svg>						
+							<a href="https://t.me/russian_plazma_drink">@russian_plazma_drink</a>
+						</div>
+						<h3>Дизайн слайдов</h3>
+						<div class="contact-line">
+							<svg width="33" viewBox="0 0 67 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M65.9655 1.55191C65.1471 0.551041 63.9213 0 62.5136 0C61.7483 0 60.9376 0.161018 60.1044 0.479477L3.39018 22.129C0.380415 23.2776 -0.0249421 25.0013 0.00112749 25.9265C0.0271971 26.8517 0.529676 28.5498 3.59976 29.5267C3.61816 29.5323 3.63656 29.5379 3.65497 29.543L15.419 32.9096L21.781 51.1021C22.6485 53.5823 24.5955 55.123 26.8631 55.123C28.2928 55.123 29.699 54.5239 30.9299 53.3911L38.2064 46.6912L48.7606 55.1894C48.7616 55.1905 48.7631 55.191 48.7641 55.192L48.8643 55.2728C48.8735 55.2799 48.8832 55.2876 48.8924 55.2947C50.0656 56.2046 51.346 56.6851 52.5969 56.6856C55.0408 56.6856 56.9873 54.8766 57.5542 52.0774L66.8467 6.19282C67.2199 4.35107 66.9071 2.70306 65.9655 1.55191ZM19.3545 32.2701L42.0509 20.6753L27.9186 35.6919C27.6871 35.9378 27.523 36.2388 27.4422 36.5665L24.7172 47.6047L19.3545 32.2701ZM28.2703 50.503C28.1763 50.5894 28.0817 50.6666 27.9871 50.7377L30.5154 40.4979L35.1144 44.2013L28.2703 50.503ZM62.9992 5.41328L53.7066 51.2984C53.6172 51.7375 53.3314 52.7593 52.5969 52.7593C52.2339 52.7593 51.778 52.5615 51.3113 52.2022L39.352 42.5727C39.3504 42.5712 39.3484 42.5697 39.3463 42.5687L32.2304 36.8384L52.6674 15.1224C53.3217 14.4272 53.381 13.3625 52.808 12.5988C52.2345 11.8351 51.1953 11.5949 50.3452 12.0294L16.7317 29.2016L4.80765 25.79L61.5045 4.14712C61.9835 3.96412 62.3178 3.92578 62.5136 3.92578C62.6337 3.92578 62.8474 3.94009 62.9266 4.03773C63.0309 4.16501 63.1638 4.59899 62.9992 5.41328Z" fill="#FF00FE"/>
+							</svg>	
+							<a href="https://t.me/eirelavfilatova">Валерия Филатова</a>
+						</div>
+						<!-- <img src="pictures/slides-link.svg" alt="qr link to slides"> -->
+					</div>
+					<div class="column">
+						<svg id="link-slides" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 2000 2000" x="0" y="0" shape-rendering="crispEdges">
+							<defs></defs>
+							<rect x="0" y="0" width="2000" height="2000" fill="#ffffff"></rect>
+							<svg viewBox="0 0 4 4" x="743" y="173" width="57" height="57" shape-rendering="auto">
+								<path fill="#000000" d="M4,4V2A2,2,0,0,0,0,2H0V4Z"></path>
+							</svg>
+							<svg viewBox="0 0 4 4" x="857" y="173" width="57" height="57" shape-rendering="auto">
+								<path fill="#000000" d="M0,2A2,2,0,0,0,2,4H2A2,2,0,0,0,2,0H2A2,2,0,0,0,0,2Z"></path>
+							</svg>
+							<svg viewBox="0 0 4 4" x="914" y="173" width="57" height="57" shape-rendering="auto">
+								<path fill="#000000" d="M2,4H4V2A2,2,0,0,1,2,4Z"></path>
+							</svg>
+							<svg viewBox="0 0 4 4" x="971" y="173" width="57" height="57" shape-rendering="auto">
+								<path fill="#000000" d="M0,2V4H4V0H2A2,2,0,0,0,0,2Z"></path>
+							</svg>
+							<svg viewBox="0 0 4 4" x="1028" y="173" width="57" height="57" shape-rendering="auto">
+								<rect fill="#000000" width="4" height="4"></rect>
+							</svg>
+							<svg viewBox="0 0 4 4" x="1085" y="173" width="57" height="57" shape-rendering="auto">
+								<path fill="#000000" d="M0,4H2A2,2,0,0,0,2,0H0Z"></path>
+							</svg>
+							<svg viewBox="0 0 4 4" x="1313" y="173" width="57" height="57" shape-rendering="auto">
+								<path fill="#000000" d="M4,4V2A2,2,0,0,0,0,2H0V4Z"></path>
+							</svg>
+							<svg viewBox="0 0 4 4" x="629" y="230" width="57" height="57" shape-rendering="auto">
+								<path fill="#000000" d="M0,2A2,2,0,0,0,2,4H2A2,2,0,0,0,2,0H2A2,2,0,0,0,0,2Z"></path>
+							</svg>
+							<svg viewBox="0 0 4 4" x="743" y="230" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,0V2A2,2,0,0,0,4,2H4V0Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="914" y="230" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,0H2A2,2,0,0,0,2,4H4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="971" y="230" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H0V0H4V2A2,2,0,0,1,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1028" y="230" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1142" y="230" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2A2,2,0,0,0,2,4H2A2,2,0,0,0,2,0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1256" y="230" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H4V2A2,2,0,0,1,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1313" y="230" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="857" y="287" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,4V2A2,2,0,0,0,0,2H0V4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1142" y="287" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H4V2A2,2,0,0,1,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1199" y="287" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V4H4V0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1256" y="287" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1313" y="287" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H0V0H4V2A2,2,0,0,1,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="629" y="344" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,0H2A2,2,0,0,0,2,4H4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="686" y="344" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="743" y="344" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,4H2A2,2,0,0,0,2,0H0Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="857" y="344" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,0V2A2,2,0,0,0,4,2H4V0Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1028" y="344" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2A2,2,0,0,0,2,4H2A2,2,0,0,0,2,0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1142" y="344" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,0H2A2,2,0,0,0,2,4H4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1199" y="344" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1256" y="344" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="629" y="401" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,2V0H2A2,2,0,0,1,4,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="629" y="401" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H4V2A2,2,0,0,1,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="686" y="401" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="743" y="401" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="971" y="401" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2A2,2,0,0,0,2,4H2A2,2,0,0,0,2,0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1085" y="401" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2A2,2,0,0,0,2,4H2A2,2,0,0,0,2,0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1142" y="401" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,2V0H2A2,2,0,0,1,4,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1142" y="401" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H4V2A2,2,0,0,1,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1199" y="401" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1256" y="401" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V4H2A2,2,0,0,1,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="629" y="458" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V4H4V0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="686" y="458" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H0V0H4V2A2,2,0,0,1,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="800" y="458" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,0H2A2,2,0,0,0,2,4H4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="857" y="458" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="914" y="458" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,4H2A2,2,0,0,0,2,0H0Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1028" y="458" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2A2,2,0,0,0,2,4H2A2,2,0,0,0,2,0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1142" y="458" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,0H2A2,2,0,0,0,2,4H4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1199" y="458" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1256" y="458" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,4H2A2,2,0,0,0,2,0H0Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="629" y="515" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,0V2A2,2,0,0,0,4,2H4V0Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="686" y="515" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="686" y="515" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H4V2A2,2,0,0,1,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="743" y="515" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,4V2A2,2,0,0,0,0,2H0V4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="800" y="515" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,2V0H2A2,2,0,0,1,4,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="800" y="515" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V4H2A2,2,0,0,1,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="857" y="515" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,0V2A2,2,0,0,0,4,2H4V0Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="914" y="515" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="971" y="515" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,4V2A2,2,0,0,0,0,2H0V4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1085" y="515" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,4V2A2,2,0,0,0,0,2H0V4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1142" y="515" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,2V0H2A2,2,0,0,1,4,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1142" y="515" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H4V2A2,2,0,0,1,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1142" y="515" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V4H2A2,2,0,0,1,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1199" y="515" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1256" y="515" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1256" y="515" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H4V2A2,2,0,0,1,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1256" y="515" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V4H2A2,2,0,0,1,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1313" y="515" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,4V2A2,2,0,0,0,0,2H0V4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="629" y="572" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H4V2A2,2,0,0,1,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="686" y="572" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V4H4V0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="743" y="572" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="800" y="572" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,2V4H0V0H2A2,2,0,0,1,4,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="971" y="572" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,0V2A2,2,0,0,0,4,2H4V0Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1028" y="572" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H4V2A2,2,0,0,1,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1085" y="572" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1142" y="572" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1199" y="572" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1256" y="572" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1313" y="572" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H0V0H4V2A2,2,0,0,1,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="173" y="629" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V4H4V0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="230" y="629" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="287" y="629" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="344" y="629" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="401" y="629" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,4H2A2,2,0,0,0,2,0H0Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="515" y="629" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,0H2A2,2,0,0,0,2,4H4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="572" y="629" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="629" y="629" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="686" y="629" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H0V0H4V2A2,2,0,0,1,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="743" y="629" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="743" y="629" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,2V0H2A2,2,0,0,1,4,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="800" y="629" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,0V2A2,2,0,0,0,4,2H4V0Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1028" y="629" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,0H2A2,2,0,0,0,2,4H4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1085" y="629" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg><svg viewBox="0 0 4 4" x="1142" y="629" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H0V0H4V2A2,2,0,0,1,2,4Z"></path></svg><svg viewBox="0 0 4 4" x="1199" y="629" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1370" y="629" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2A2,2,0,0,0,2,4H2A2,2,0,0,0,2,0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1484" y="629" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2A2,2,0,0,0,2,4H2A2,2,0,0,0,2,0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1541" y="629" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H4V2A2,2,0,0,1,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1598" y="629" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,4V2A2,2,0,0,0,0,2H0V4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1712" y="629" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,4V2A2,2,0,0,0,0,2H0V4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="173" y="686" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="230" y="686" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H0V0H4V2A2,2,0,0,1,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="287" y="686" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="287" y="686" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,2V0H2A2,2,0,0,1,4,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="344" y="686" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="401" y="686" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="572" y="686" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,2V0H2A2,2,0,0,1,4,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="572" y="686" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H4V2A2,2,0,0,1,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="629" y="686" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="686" y="686" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="743" y="686" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,4V2A2,2,0,0,0,0,2H0V4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="857" y="686" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2A2,2,0,0,0,2,4H2A2,2,0,0,0,2,0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="971" y="686" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2A2,2,0,0,0,2,4H2A2,2,0,0,0,2,0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1028" y="686" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,2V0H2A2,2,0,0,1,4,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1085" y="686" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,0V2A2,2,0,0,0,4,2H4V0Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1142" y="686" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1199" y="686" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2A2,2,0,0,0,2,4H2A2,2,0,0,0,2,0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1313" y="686" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,4V2A2,2,0,0,0,0,2H0V4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1541" y="686" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,0H2A2,2,0,0,0,2,4H4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1598" y="686" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1655" y="686" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V4H2A2,2,0,0,1,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1712" y="686" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,0V2A2,2,0,0,0,4,2H4V0Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="173" y="743" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,0V2A2,2,0,0,0,4,2H4V0Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="230" y="743" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="344" y="743" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,0V2A2,2,0,0,0,4,2H4V0Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="515" y="743" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,0H2A2,2,0,0,0,2,4H4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="572" y="743" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="629" y="743" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H0V0H4V2A2,2,0,0,1,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="743" y="743" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,0V2A2,2,0,0,0,4,2H4V0Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="914" y="743" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2A2,2,0,0,0,2,4H2A2,2,0,0,0,2,0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1085" y="743" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H4V2A2,2,0,0,1,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1142" y="743" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,4V2A2,2,0,0,0,0,2H0V4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1199" y="743" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V4H2A2,2,0,0,1,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1256" y="743" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H4V2A2,2,0,0,1,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1313" y="743" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1541" y="743" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,2V0H2A2,2,0,0,1,4,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1541" y="743" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H4V2A2,2,0,0,1,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1598" y="743" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1655" y="743" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,4H2A2,2,0,0,0,2,0H0Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="401" y="800" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V4H4V0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="458" y="800" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,4H2A2,2,0,0,0,2,0H0Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="857" y="800" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,4V2A2,2,0,0,0,0,2H0V4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="971" y="800" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2A2,2,0,0,0,2,4H2A2,2,0,0,0,2,0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1028" y="800" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H4V2A2,2,0,0,1,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1085" y="800" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V4H4V0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1142" y="800" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1199" y="800" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1256" y="800" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1313" y="800" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1370" y="800" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V4H2A2,2,0,0,1,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1427" y="800" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,0H2A2,2,0,0,0,2,4H4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1484" y="800" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1541" y="800" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1598" y="800" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H0V0H4V2A2,2,0,0,1,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1655" y="800" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1769" y="800" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2A2,2,0,0,0,2,4H2A2,2,0,0,0,2,0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="173" y="857" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2A2,2,0,0,0,2,4H2A2,2,0,0,0,2,0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="287" y="857" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,4V2A2,2,0,0,0,0,2H0V4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="344" y="857" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H4V2A2,2,0,0,1,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="344" y="857" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V4H2A2,2,0,0,1,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="401" y="857" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="458" y="857" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="515" y="857" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,0H2A2,2,0,0,0,2,4H4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="572" y="857" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,4H2A2,2,0,0,0,2,0H0Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="686" y="857" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,0H2A2,2,0,0,0,2,4H4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="743" y="857" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,4H2A2,2,0,0,0,2,0H0Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="857" y="857" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,0V2A2,2,0,0,0,4,2H4V0Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="971" y="857" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H4V2A2,2,0,0,1,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1028" y="857" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V4H4V0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1085" y="857" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1142" y="857" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1142" y="857" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,2V0H2A2,2,0,0,1,4,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1199" y="857" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,0V2A2,2,0,0,0,4,2H4V0Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1256" y="857" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1256" y="857" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,2V0H2A2,2,0,0,1,4,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1313" y="857" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H4V0H0V2A2,2,0,0,0,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1370" y="857" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,2V4H0V0H2A2,2,0,0,1,4,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1427" y="857" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V4H2A2,2,0,0,1,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="230" y="914" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H4V2A2,2,0,0,1,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="287" y="914" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="344" y="914" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="401" y="914" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="458" y="914" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V4H2A2,2,0,0,1,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="914" y="914" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H4V2A2,2,0,0,1,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="971" y="914" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V4H4V0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1028" y="914" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1085" y="914" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H0V0H4V2A2,2,0,0,1,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1313" y="914" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,2V0H2A2,2,0,0,1,4,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1370" y="914" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H4V0H0V2A2,2,0,0,0,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1427" y="914" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1484" y="914" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,4H2A2,2,0,0,0,2,0H0Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1598" y="914" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,4V2A2,2,0,0,0,0,2H0V4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1655" y="914" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H4V2A2,2,0,0,1,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1655" y="914" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V4H2A2,2,0,0,1,0,2Z"></path></svg>    
+							<svg viewBox="0 0 4 4" x="1712" y="914" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,4V2A2,2,0,0,0,0,2H0V4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1769" y="914" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V4H2A2,2,0,0,1,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="230" y="971" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V4H4V0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="287" y="971" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H0V0H4V2A2,2,0,0,1,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="344" y="971" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="344" y="971" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,2V0H2A2,2,0,0,1,4,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="401" y="971" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H4V0H0V2A2,2,0,0,0,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="458" y="971" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="515" y="971" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,4H2A2,2,0,0,0,2,0H0Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="686" y="971" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,0H2A2,2,0,0,0,2,4H4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="743" y="971" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="800" y="971" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="857" y="971" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="914" y="971" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="971" y="971" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1028" y="971" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1142" y="971" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,4V2A2,2,0,0,0,0,2H0V4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1199" y="971" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H4V2A2,2,0,0,1,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1199" y="971" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V4H2A2,2,0,0,1,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1256" y="971" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,4V2A2,2,0,0,0,0,2H0V4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1313" y="971" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V4H2A2,2,0,0,1,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1598" y="971" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H4V0H0V2A2,2,0,0,0,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1655" y="971" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1712" y="971" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1769" y="971" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,2V4H0V0H2A2,2,0,0,1,4,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="230" y="1028" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,0V2A2,2,0,0,0,4,2H4V0Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="287" y="1028" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="287" y="1028" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H4V2A2,2,0,0,1,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="344" y="1028" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,4V2A2,2,0,0,0,0,2H0V4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="401" y="1028" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,2V0H2A2,2,0,0,1,4,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="401" y="1028" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V4H2A2,2,0,0,1,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="458" y="1028" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,0V2A2,2,0,0,0,4,2H4V0Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="515" y="1028" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="629" y="1028" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,4V2A2,2,0,0,0,0,2H0V4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="686" y="1028" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,2V0H2A2,2,0,0,1,4,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="743" y="1028" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="800" y="1028" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="857" y="1028" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="857" y="1028" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,2V0H2A2,2,0,0,1,4,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="914" y="1028" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H4V0H0V2A2,2,0,0,0,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="971" y="1028" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H0V0H4V2A2,2,0,0,1,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1085" y="1028" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H4V2A2,2,0,0,1,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1142" y="1028" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1199" y="1028" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1256" y="1028" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1313" y="1028" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,2V4H0V0H2A2,2,0,0,1,4,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1370" y="1028" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H4V2A2,2,0,0,1,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1370" y="1028" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V4H2A2,2,0,0,1,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1427" y="1028" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V4H4V0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1484" y="1028" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1541" y="1028" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,2V4H0V0H2A2,2,0,0,1,4,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1655" y="1028" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,2V0H2A2,2,0,0,1,4,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1712" y="1028" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H4V0H0V2A2,2,0,0,0,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1769" y="1028" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H0V0H4V2A2,2,0,0,1,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="173" y="1085" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,4V2A2,2,0,0,0,0,2H0V4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="230" y="1085" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V4H2A2,2,0,0,1,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="287" y="1085" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,0H2A2,2,0,0,0,2,4H4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="344" y="1085" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="401" y="1085" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,2V4H0V0H2A2,2,0,0,1,4,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="458" y="1085" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V4H2A2,2,0,0,1,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="515" y="1085" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2A2,2,0,0,0,2,4H2A2,2,0,0,0,2,0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="629" y="1085" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,0V2A2,2,0,0,0,4,2H4V0Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="686" y="1085" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H4V2A2,2,0,0,1,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="743" y="1085" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="800" y="1085" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H0V0H4V2A2,2,0,0,1,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="971" y="1085" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H4V2A2,2,0,0,1,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1028" y="1085" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V4H4V0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1085" y="1085" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>    
+							<svg viewBox="0 0 4 4" x="1142" y="1085" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H0V0H4V2A2,2,0,0,1,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1199" y="1085" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1256" y="1085" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,2V0H2A2,2,0,0,1,4,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1256" y="1085" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H4V2A2,2,0,0,1,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1313" y="1085" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1370" y="1085" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1427" y="1085" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1484" y="1085" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1541" y="1085" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="173" y="1142" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="230" y="1142" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,4H2A2,2,0,0,0,2,0H0Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="344" y="1142" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,2V0H2A2,2,0,0,1,4,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="344" y="1142" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H4V2A2,2,0,0,1,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="401" y="1142" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="458" y="1142" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,2V4H0V0H2A2,2,0,0,1,4,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="515" y="1142" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V4H2A2,2,0,0,1,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="686" y="1142" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V4H4V0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="743" y="1142" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H0V0H4V2A2,2,0,0,1,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="800" y="1142" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="857" y="1142" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2A2,2,0,0,0,2,4H2A2,2,0,0,0,2,0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="971" y="1142" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,0H2A2,2,0,0,0,2,4H4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1028" y="1142" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1085" y="1142" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H0V0H4V2A2,2,0,0,1,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1142" y="1142" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1256" y="1142" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,0H2A2,2,0,0,0,2,4H4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1313" y="1142" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H0V0H4V2A2,2,0,0,1,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1370" y="1142" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1427" y="1142" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,2V0H2A2,2,0,0,1,4,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1484" y="1142" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H4V0H0V2A2,2,0,0,0,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1541" y="1142" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H0V0H4V2A2,2,0,0,1,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1655" y="1142" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H4V2A2,2,0,0,1,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1712" y="1142" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,4V2A2,2,0,0,0,0,2H0V4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1769" y="1142" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V4H2A2,2,0,0,1,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="173" y="1199" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="230" y="1199" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="287" y="1199" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,0H2A2,2,0,0,0,2,4H4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="344" y="1199" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="401" y="1199" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="458" y="1199" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="515" y="1199" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="572" y="1199" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,4H2A2,2,0,0,0,2,0H0Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="629" y="1199" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H4V2A2,2,0,0,1,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="686" y="1199" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="743" y="1199" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="857" y="1199" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H4V2A2,2,0,0,1,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="914" y="1199" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,4V2A2,2,0,0,0,0,2H0V4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="971" y="1199" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,2V0H2A2,2,0,0,1,4,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1028" y="1199" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,0V2A2,2,0,0,0,4,2H4V0Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1085" y="1199" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1085" y="1199" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H4V2A2,2,0,0,1,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1142" y="1199" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V4H4V0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1199" y="1199" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,2V4H0V0H2A2,2,0,0,1,4,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1256" y="1199" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V4H2A2,2,0,0,1,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1598" y="1199" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,0H2A2,2,0,0,0,2,4H4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1655" y="1199" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1712" y="1199" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1769" y="1199" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,2V4H0V0H2A2,2,0,0,1,4,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="173" y="1256" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="287" y="1256" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,2V0H2A2,2,0,0,1,4,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="344" y="1256" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="401" y="1256" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="401" y="1256" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V4H2A2,2,0,0,1,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="629" y="1256" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,0H2A2,2,0,0,0,2,4H4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="686" y="1256" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H0V0H4V2A2,2,0,0,1,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="857" y="1256" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V4H4V0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="914" y="1256" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="971" y="1256" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V4H2A2,2,0,0,1,0,2Z"></path></svg>    
+							<svg viewBox="0 0 4 4" x="1085" y="1256" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,0H2A2,2,0,0,0,2,4H4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1142" y="1256" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1199" y="1256" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1256" y="1256" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1313" y="1256" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1370" y="1256" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1427" y="1256" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1484" y="1256" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1541" y="1256" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,2V4H0V0H2A2,2,0,0,1,4,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1598" y="1256" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,2V0H2A2,2,0,0,1,4,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1655" y="1256" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1712" y="1256" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1769" y="1256" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H0V0H4V2A2,2,0,0,1,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="173" y="1313" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,0V2A2,2,0,0,0,4,2H4V0Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="344" y="1313" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H4V0H0V2A2,2,0,0,0,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="401" y="1313" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,4H2A2,2,0,0,0,2,0H0Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="515" y="1313" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,0H2A2,2,0,0,0,2,4H4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="572" y="1313" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,4H2A2,2,0,0,0,2,0H0Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="743" y="1313" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2A2,2,0,0,0,2,4H2A2,2,0,0,0,2,0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="857" y="1313" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H4V0H0V2A2,2,0,0,0,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="914" y="1313" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="971" y="1313" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1028" y="1313" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,2V4H0V0H2A2,2,0,0,1,4,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1085" y="1313" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,2V0H2A2,2,0,0,1,4,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1085" y="1313" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V4H2A2,2,0,0,1,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1142" y="1313" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,0V2A2,2,0,0,0,4,2H4V0Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1199" y="1313" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1256" y="1313" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,2V0H2A2,2,0,0,1,4,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1313" y="1313" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1370" y="1313" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1427" y="1313" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1484" y="1313" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1541" y="1313" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1655" y="1313" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H4V0H0V2A2,2,0,0,0,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1712" y="1313" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1769" y="1313" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="629" y="1370" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,4V2A2,2,0,0,0,0,2H0V4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="686" y="1370" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V4H2A2,2,0,0,1,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="914" y="1370" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,2V0H2A2,2,0,0,1,4,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="971" y="1370" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H4V0H0V2A2,2,0,0,0,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1028" y="1370" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1085" y="1370" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,2V4H0V0H2A2,2,0,0,1,4,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1142" y="1370" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V4H2A2,2,0,0,1,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1256" y="1370" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H4V2A2,2,0,0,1,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1313" y="1370" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1370" y="1370" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1484" y="1370" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,2V0H2A2,2,0,0,1,4,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1541" y="1370" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1655" y="1370" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,2V0H2A2,2,0,0,1,4,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1712" y="1370" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,0V2A2,2,0,0,0,4,2H4V0Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="629" y="1427" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H4V0H0V2A2,2,0,0,0,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="686" y="1427" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="743" y="1427" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="800" y="1427" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="857" y="1427" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,4H2A2,2,0,0,0,2,0H0Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="971" y="1427" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,2V0H2A2,2,0,0,1,4,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1028" y="1427" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H4V0H0V2A2,2,0,0,0,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1085" y="1427" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1142" y="1427" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,4H2A2,2,0,0,0,2,0H0Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1256" y="1427" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V4H4V0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1313" y="1427" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1427" y="1427" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2A2,2,0,0,0,2,4H2A2,2,0,0,0,2,0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1541" y="1427" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1598" y="1427" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H4V2A2,2,0,0,1,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1598" y="1427" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V4H2A2,2,0,0,1,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1655" y="1427" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,4V2A2,2,0,0,0,0,2H0V4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1712" y="1427" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V4H2A2,2,0,0,1,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="743" y="1484" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,2V0H2A2,2,0,0,1,4,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="800" y="1484" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="857" y="1484" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1028" y="1484" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,2V0H2A2,2,0,0,1,4,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1028" y="1484" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H4V2A2,2,0,0,1,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1085" y="1484" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1142" y="1484" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1142" y="1484" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V4H2A2,2,0,0,1,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1199" y="1484" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H4V2A2,2,0,0,1,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1256" y="1484" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1313" y="1484" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1370" y="1484" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V4H2A2,2,0,0,1,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1484" y="1484" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H4V2A2,2,0,0,1,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1541" y="1484" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1598" y="1484" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1655" y="1484" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1712" y="1484" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1769" y="1484" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,2V4H0V0H2A2,2,0,0,1,4,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="629" y="1541" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V4H4V0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="686" y="1541" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,2V4H0V0H2A2,2,0,0,1,4,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="743" y="1541" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V4H2A2,2,0,0,1,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="800" y="1541" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,0V2A2,2,0,0,0,4,2H4V0Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1028" y="1541" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V4H4V0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1085" y="1541" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1142" y="1541" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1199" y="1541" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1256" y="1541" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1313" y="1541" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1370" y="1541" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1427" y="1541" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1484" y="1541" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1541" y="1541" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1598" y="1541" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1655" y="1541" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1712" y="1541" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1769" y="1541" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H0V0H4V2A2,2,0,0,1,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="629" y="1598" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="686" y="1598" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="743" y="1598" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,4H2A2,2,0,0,0,2,0H0Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="857" y="1598" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,0H2A2,2,0,0,0,2,4H4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="914" y="1598" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,2V4H0V0H2A2,2,0,0,1,4,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="971" y="1598" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H4V2A2,2,0,0,1,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="971" y="1598" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V4H2A2,2,0,0,1,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1028" y="1598" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1085" y="1598" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1256" y="1598" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,2V0H2A2,2,0,0,1,4,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1313" y="1598" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H4V0H0V2A2,2,0,0,0,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1370" y="1598" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H0V0H4V2A2,2,0,0,1,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1427" y="1598" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1484" y="1598" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,2V0H2A2,2,0,0,1,4,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1541" y="1598" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,0V2A2,2,0,0,0,4,2H4V0Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1598" y="1598" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="629" y="1655" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="686" y="1655" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="743" y="1655" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="857" y="1655" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,2V0H2A2,2,0,0,1,4,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="857" y="1655" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H4V2A2,2,0,0,1,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="914" y="1655" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="971" y="1655" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1028" y="1655" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H0V0H4V2A2,2,0,0,1,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1142" y="1655" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2A2,2,0,0,0,2,4H2A2,2,0,0,0,2,0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1484" y="1655" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2A2,2,0,0,0,2,4H2A2,2,0,0,0,2,0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1598" y="1655" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H4V2A2,2,0,0,1,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1655" y="1655" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V4H4V0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1712" y="1655" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,4H2A2,2,0,0,0,2,0H0Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="629" y="1712" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="686" y="1712" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="857" y="1712" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V4H4V0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="914" y="1712" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H0V0H4V2A2,2,0,0,1,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="971" y="1712" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1085" y="1712" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2A2,2,0,0,0,2,4H2A2,2,0,0,0,2,0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1256" y="1712" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H4V2A2,2,0,0,1,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1313" y="1712" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,4V2A2,2,0,0,0,0,2H0V4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1370" y="1712" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V4H2A2,2,0,0,1,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1541" y="1712" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H4V2A2,2,0,0,1,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1598" y="1712" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V4H4V0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1655" y="1712" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1712" y="1712" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1769" y="1712" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2A2,2,0,0,0,2,4H2A2,2,0,0,0,2,0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="629" y="1769" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H4V0H0V2A2,2,0,0,0,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="686" y="1769" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H0V0H4V2A2,2,0,0,1,2,4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="857" y="1769" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,0V2A2,2,0,0,0,4,2H4V0Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="914" y="1769" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,2V0H2A2,2,0,0,0,0,2Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="971" y="1769" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,0H2A2,2,0,0,0,2,4H4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1028" y="1769" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M0,4H2A2,2,0,0,0,2,0H0Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1256" y="1769" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M4,0H2A2,2,0,0,0,2,4H4Z"></path></svg>
+							<svg viewBox="0 0 4 4" x="1313" y="1769" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1370" y="1769" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1427" y="1769" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1484" y="1769" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1541" y="1769" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1598" y="1769" width="57" height="57" shape-rendering="auto"><rect fill="#000000" width="4" height="4"></rect></svg>
+							<svg viewBox="0 0 4 4" x="1655" y="1769" width="57" height="57" shape-rendering="auto"><path fill="#000000" d="M2,4H0V0H4V2A2,2,0,0,1,2,4Z"></path></svg>
+							<svg x="173" y="173" width="399" height="399" viewBox="0 0 699.988 699.986" enable-background="new 0 0 699.988 699.986" xml:space="preserve" shape-rendering="auto">
+								<path fill="#000000" d="M600.99,0h-100h-99.997h-0.001h-99.997h-99.998h-99.998H1v99.998v99.998v99.998v99.999v99.997v99.998v99.998  h99.999h99.998h99.998h99.997h0.001h99.997h100h99.998v-99.998V499.99v-99.997v-99.999v-99.998V99.998V0H600.99z M600.99,199.996  v99.998v99.999v99.997v99.998h-100h-99.997h-0.001h-99.997h-99.998h-99.998V499.99v-99.997v-99.999v-99.998V99.998h99.998h99.998  h99.997h0.001h99.997h100V199.996z"></path>
+							</svg>
+							<svg x="173" y="173" width="399" height="399" viewBox="0 0 699.988 699.988" enable-background="new 0 0 699.988 699.988" xml:space="preserve" shape-rendering="auto">
+								<polygon fill="#000000" points="399.994,199.997 399.992,199.997 299.996,199.997 199.998,199.997 199.998,299.994 199.998,399.994   199.998,499.991 299.996,499.991 399.992,499.991 399.994,499.991 499.99,499.991 499.99,399.994 499.99,299.994 499.99,199.997 "></polygon>
+							</svg>
+							<svg x="1427" y="173" width="399" height="399" viewBox="0 0 699.988 699.986" enable-background="new 0 0 699.988 699.986" xml:space="preserve" shape-rendering="auto">
+								<path fill="#000000" d="M600.99,0h-100h-99.997h-0.001h-99.997h-99.998h-99.998H1v99.998v99.998v99.998v99.999v99.997v99.998v99.998  h99.999h99.998h99.998h99.997h0.001h99.997h100h99.998v-99.998V499.99v-99.997v-99.999v-99.998V99.998V0H600.99z M600.99,199.996  v99.998v99.999v99.997v99.998h-100h-99.997h-0.001h-99.997h-99.998h-99.998V499.99v-99.997v-99.999v-99.998V99.998h99.998h99.998  h99.997h0.001h99.997h100V199.996z"></path>
+							</svg>
+							<svg x="1427" y="173" width="399" height="399" viewBox="0 0 699.988 699.988" enable-background="new 0 0 699.988 699.988" xml:space="preserve" shape-rendering="auto">
+								<polygon fill="#000000" points="399.994,199.997 399.992,199.997 299.996,199.997 199.998,199.997 199.998,299.994 199.998,399.994   199.998,499.991 299.996,499.991 399.992,499.991 399.994,499.991 499.99,499.991 499.99,399.994 499.99,299.994 499.99,199.997 "></polygon>
+							</svg>
+							<svg x="173" y="1427" width="399" height="399" viewBox="0 0 699.988 699.986" enable-background="new 0 0 699.988 699.986" xml:space="preserve" shape-rendering="auto">
+								<path fill="#000000" d="M600.99,0h-100h-99.997h-0.001h-99.997h-99.998h-99.998H1v99.998v99.998v99.998v99.999v99.997v99.998v99.998  h99.999h99.998h99.998h99.997h0.001h99.997h100h99.998v-99.998V499.99v-99.997v-99.999v-99.998V99.998V0H600.99z M600.99,199.996  v99.998v99.999v99.997v99.998h-100h-99.997h-0.001h-99.997h-99.998h-99.998V499.99v-99.997v-99.999v-99.998V99.998h99.998h99.998  h99.997h0.001h99.997h100V199.996z"></path>
+							</svg>
+							<svg x="173" y="1427" width="399" height="399" viewBox="0 0 699.988 699.988" enable-background="new 0 0 699.988 699.988" xml:space="preserve" shape-rendering="auto">
+								<polygon fill="#000000" points="399.994,199.997 399.992,199.997 299.996,199.997 199.998,199.997 199.998,299.994 199.998,399.994   199.998,499.991 299.996,499.991 399.992,499.991 399.994,499.991 499.99,499.991 499.99,399.994 499.99,299.994 499.99,199.997 "></polygon>
+							</svg>
+						</svg>
+					</div> <!-- column -->	
+				</div> <!-- columns -->	
 			</div>
+
+			<style>
+				#contact .contact-line {
+					display: flex;
+					align-items: center;
+					gap: 20px;
+					line-height: 1.3;
+					margin-bottom: 20px;
+				}
+
+				#contact h3 {
+					margin-bottom: 15px;
+    				margin-top: 30px;
+				}
+
+				#link-slides {
+					margin: auto;
+					width: 200px;
+					display: block;
+					position: relative;
+    				top: -30px;
+					border: 2px solid var(--color-blue);
+				}
+			</style>
 		</section>
 
-		<section class="slide title">
+		<section class="slide title" id="thx">
 			<div class="content">
-				<h2>Спасибо за внимание</h2>
-				<p>Куар-код на опрос</p>
+				<h1 class="shout">Спасибо за внимание</h1>
+				<img src="pictures/questions-link.png" alt="questions link">
 			</div>
+
+			<style>
+				#thx.slide h1.shout {
+					position: static;
+					margin-top: 100px;
+					margin-bottom: 30px;
+				}
+				#thx.slide img {
+					width: 200px;
+    				margin: auto;
+				}
+			</style>
 		</section>
 
 		<footer class="badge">
